@@ -1,3 +1,4 @@
+# Import necessary libraries
 import streamlit as st
 from PIL import Image
 from langchain_helper import get_qa_chain, create_vector_db
@@ -17,15 +18,19 @@ with col2:
 with col3:
     st.image(Image.open(r"C:\Users\amirh\OneDrive\Desktop\personal\others/aslogo.jpg"), width=40)
 
+# Button to create knowledgebase
 btn = st.button("Create Knowledgebase")
 if btn:
     create_vector_db()
 
+# Input field for the question
 question = st.text_input("Question: ")
 
+# Process question and show answer
 if question:
     chain = get_qa_chain()
     response = chain(question)
 
+    # Display the answer
     st.header("Answer")
     st.write(response["result"])
