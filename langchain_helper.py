@@ -19,7 +19,7 @@ llm = GooglePalm(google_api_key=os.environ["GOOGLE_API_KEY"], temperature=0.1)
 my_embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-large")
 
 # File path for the FAISS vector database
-vectordb_file_path = r"C:\Users\amirh\OneDrive\Desktop\Projects\llm\faiss_index"
+vectordb_file_path = "faiss_index"
 
 def create_vector_db():
     """
