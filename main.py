@@ -16,7 +16,7 @@ with col2:
 
 # Add some horizontal spacing
 with col3:
-    st.image(Image.open(r"C:\Users\amirh\OneDrive\Desktop\personal\others/aslogo.jpg"), width=40)
+    st.image(Image.open("aslogo.jpg"), width=40)
 
 # Button to create knowledgebase
 btn = st.button("Create Knowledgebase")
